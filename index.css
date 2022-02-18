@@ -5,6 +5,9 @@ body{
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+main{
+    height: 75vh;
+}
 /*Header*/
 .nav-bar{
     display: flex;
@@ -46,8 +49,14 @@ body{
 .menu-mobile{
     display: none;
 }
+.nav-bar-icones-svg--menu{
+    display: none;
+}
 /*Header mobile*/
 @media (max-width:768px) {
+    .nav-bar-icones-svg{
+        display: block;
+    }
     .nav-bar-links{
         display: none;
     }
@@ -77,12 +86,133 @@ body{
         margin: 90px 0px;
         padding: 1rem;
         background-color: rgb(158, 158, 158);
-        border-radius: 0.4rem;
+        border-radius: 0.6rem;
     }
     .menu-mobile-ul-a{
         text-decoration: none;
         color: white;
     
+    }
+    
+}
+
+/*fone e compra*/
+
+.buy-main{
+    margin-top: 7rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0px 11.5%;
+}
+.img-fone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.buy{
+    display: flex;
+    justify-content: center;
+    margin-left: 26%;
+    align-content: center;
+    flex-direction: column;
+}
+.titulo-buy{
+    color: red;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    font-size: 34px;
+}
+.especif-buy{
+    margin: 0;
+    padding: 0;
+}
+.especif-buy-txt{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+.preco{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+.preco-preco{
+    font-size: 30px;
+}
+.preco-button{
+    text-transform: uppercase;
+    margin-left: 3rem;
+    width: 8rem;
+    background-color: rgb(206, 1, 1);
+    border-style: none;
+    color: white;
+    height: 3rem;
+    transition: .3s;
+}
+.preco-button:hover{
+    background-color: darkred;
+}
+
+@media (max-width:768px) {
+    .img-fone{
+        grid-column: span 2;
+    }
+    .buy{
+        grid-column: span 2;
+    }
+    .img-fone-img{
+        width: 100%!important;
+    }
+    .buy {
+        display: flex;
+        justify-content: center;
+        margin-left: 0;
+        align-content: center;
+        flex-direction: column;
+    }
+    .titulo-buy {
+        color: red;
+        text-transform: uppercase;
+        letter-spacing: 0.4rem;
+        font-size: 24px;
+        text-align: center;
+
+    } 
+    .preco-button{
+        width: 100%;
+    }
+}
+
+/*Footer*/
+.footer-div{
+    border-radius: 5px;
+    background-color: rgb(252, 252, 133);
+    margin: 0px 6.5%;
+
+}
+.footer-divs{
+    margin: 0px 20%;
+    display: flex;
+    justify-content: space-around;
+
+}
+.footer-divs-sec{
+    display: flex;
+    width: 200px;
+}
+
+@media (max-width:768px) {
+    main{
+        height: auto;
+    }
+    .footer-div{
+        margin-top: 1rem;
+    }
+    .footer-divs{
+        display: flex;
+        flex-direction: column;
     }
     
 }
